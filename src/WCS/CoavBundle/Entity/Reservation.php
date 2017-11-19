@@ -148,6 +148,14 @@ class Reservation
     }
 
     /**
+     * @param int $id
+     */
+    public function __toString()
+    {
+       return ' For ' . $this->flights . ' : ' . $this->passengers;
+    }
+
+    /**
      * Add passenger
      *
      * @param \WCS\CoavBundle\Entity\User $passenger

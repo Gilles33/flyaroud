@@ -162,7 +162,8 @@ class Review
      */
     public function getPublicationDate()
     {
-        return $this->publicationDate;
+
+        return $this->publicationDate->format('d-m-Y');
     }
 
     /**
