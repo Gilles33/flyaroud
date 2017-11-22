@@ -107,7 +107,7 @@ class User
     private $isActive;
 
     /**
-     * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation", inversedBy="passengers")
+     * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\Reservation", mappedBy="passengers")
      * @ORM\JoinColumn(nullable=false)
      */
     private $reservations;

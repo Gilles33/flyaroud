@@ -22,10 +22,10 @@
                 <td>{{ reservation.nbReservedSeats }}</td>
                 <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 {% for passenger in reservation.passengers %}
-                <td>{{ reservation.passenger }}</td>
+                <td>{{ passenger }}</td>
                 {% endfor %}
                 {% for flight in reservation.flights %}
-                <td>{{ reservation.flight }}</td>
+                <td>{{ flight }}</td>
                 {% endfor %}
                 <td>{% if reservation.wasDone %}Yes{% else %}No{% endif %}</td>
                 <td>

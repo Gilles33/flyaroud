@@ -20,13 +20,13 @@
             <tr>
                 <th>Passengers</th>
                 {% for user in reservation.passengers %}
-                <td>{{ reservation.user }}</td>
+                <td>{{ user }}</td>
                 {% endfor %}
             </tr>
             <tr>
                 <th>Flight</th>
                 {% for flight in reservation.passengers %}
-                <td>{{ reservation.flight }}</td>
+                <td>{{ flight }}</td>
                 {% endfor %}
             </tr>
             <tr>

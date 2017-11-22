@@ -163,7 +163,7 @@ class Review
     public function getPublicationDate()
     {
 
-        return $this->publicationDate->format('d-m-Y');
+        return $this->publicationDate;
     }
 
     /**
