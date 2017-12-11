@@ -162,6 +162,7 @@ class Review
      */
     public function getPublicationDate()
     {
+
         return $this->publicationDate;
     }
 

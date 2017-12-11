@@ -31,7 +31,8 @@ class Review
     /**
      * @var int
      *
-     * @ORM\Column(name="userRated", type="integer")
+     * @ORM\ManyToOne(targetEntity="WCS\CoavBundle\Entity\User")
+     *
      */
     private $userRated;
 
@@ -161,7 +162,8 @@ class Review
      */
     public function getPublicationDate()
     {
-        return $this->publicationDate;
+
+        return $this->publicationDate->format('d-m-Y');
     }
 
     /**

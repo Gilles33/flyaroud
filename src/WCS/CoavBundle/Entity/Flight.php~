@@ -356,6 +356,11 @@ class Flight
         $this->reservations = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->departure . " to " . $this->arrival . " at " . $this->takeOffTime->format('H:i:s d-m-Y');
+    }
+
     /**
      * Add reservation
      *

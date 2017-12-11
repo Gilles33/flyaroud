@@ -37,7 +37,7 @@ class Reservation
 
     /**
      *
-     * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\User", mappedBy="reservations")
+     * @ORM\ManyToMany(targetEntity="WCS\CoavBundle\Entity\User", inversedBy="reservations")
      * @ORM\JoinColumn(nullable=false)
      */
     private $passengers;
@@ -145,6 +145,18 @@ class Reservation
     public function __construct()
     {
         $this->passengers = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @param int $id
+     */
+    public function __toString()
+    {
+        $flightList = "";
+        foreach($this->flights as $flight) {
+            $flightList .= $flight . " ";
+        }
+       return ' For ' . $flightList;
     }
 
     /**

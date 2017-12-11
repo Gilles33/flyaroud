@@ -18,12 +18,16 @@
                 <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Passenger</th>
-                <td>{{ reservation.passenger }}</td>
+                <th>Passengers</th>
+                {% for user in reservation.passengers %}
+                <td>{{ user }}</td>
+                {% endfor %}
             </tr>
             <tr>
                 <th>Flight</th>
-                <td>{{ reservation.flight }}</td>
+                {% for flight in reservation.passengers %}
+                <td>{{ flight }}</td>
+                {% endfor %}
             </tr>
             <tr>
                 <th>Wasdone</th>
